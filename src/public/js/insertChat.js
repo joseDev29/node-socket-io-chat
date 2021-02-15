@@ -2,7 +2,7 @@ function insertChat(username) {
   const chatContainer = document.getElementById("chatContainer");
 
   const chatContent = `
-  <h2 class="username-title">${username}</h2>
+  <h2 id="usernameTitle" class="username-title">${username}</h2>
     <div id="chatOutput" class="chat-output">
       <div id="messages" class="chat-messages"></div>
       <div id="actions" class="chat-actions"></div>
@@ -16,11 +16,13 @@ function insertChat(username) {
         class="chat-input-message"
         maxlength="350"
       />
-      <a href="#" id="sendMessage" class="send-message-btn"> Send </a>
+      <a href="#" id="sendMessageBtn" class="send-message-btn"> Send </a>
     </div>
 
     <div id="chatUsers" class="chat-users"></div>
   `;
 
   chatContainer.innerHTML = chatContent;
+
+  activeChatFunctions();
 }

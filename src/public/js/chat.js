@@ -1,44 +1,57 @@
 const socket = io("http://localhost:5000/");
 
-const chatInputMessage = document.getElementById("chatInputMessage");
+let username,
+  chatInputMessage,
+  sendMessageBtn,
+  chatOutputMessages,
+  chatOutputActions;
 
-const chatInputUsername = document.getElementById("chatInputUsername");
+function activeChatFunctions() {
+  username = document.getElementById("usernameTitle").textContent;
 
-const chatSendBtn = document.getElementById("chatSendBtn");
+  chatInputMessage = document.getElementById("chatInputMessage");
 
-const chatOutput = document.getElementById("chatOutput");
+  sendMessageBtn = document.getElementById("sendMessageBtn");
 
-const chatActions = document.getElementById("chatActions");
+  chatOutputMessages = document.getElementById("messages");
 
-chatSendBtn.addEventListener("click", () => {
-  const contentMessage = {
-    username: chatInputUsername.value,
-    message: chatInputMessage.value,
-  };
+  chatOutputActions = document.getElementById("actions");
 
-  console.log(contentMessage);
+  sendMessageBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const contentMessage = {
+      username: username,
+      message: chatInputMessage.value,
+    };
 
-  socket.emit("chat:message", contentMessage);
-});
+    console.log(contentMessage);
 
+    socket.emit("chat:message", contentMessage);
+  });
+
+  socket.on("chat:message", (data) => {
+    console.log("Data: ", data);
+    chatOutputMessages.insertAdjacentHTML(
+      "beforeend",
+      `
+    <p> <strong>${data.username}:</strong> ${data.message}</p>
+    `
+    );
+  });
+}
+
+/*
 chatInputMessage.addEventListener("keypress", (e) => {
   socket.emit("chat:typing", {
     username: chatInputUsername.value,
   });
 });
+*/
 
-socket.on("chat:message", (data) => {
-  console.log("Data: ", data);
-  chatOutput.insertAdjacentHTML(
-    "beforeend",
-    `
-  <p> <strong>${data.username}:</strong> ${data.message}</p>
-  `
-  );
-});
-
+/*
 socket.on("chat:typing", (data) => {
   chatActions.innerHTML = `
       <p> <strong>${data.username} está escribiendo ...</strong></p>
       `;
 });
+*/

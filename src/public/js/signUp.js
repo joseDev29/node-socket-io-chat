@@ -6,7 +6,7 @@ signUpBtn.addEventListener("click", (e) => {
   const username = usernameInput.value;
   const signUpContainer = document.getElementById("signUp");
 
-  if (username.length < 10) {
+  if (username.length < 7) {
     signUpContainer.insertAdjacentHTML(
       "afterbegin",
       `
