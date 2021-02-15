@@ -1,0 +1,129 @@
+.chat-title {
+  width: 100%;
+  margin: 30px auto;
+  font-size: 2.6rem;
+  text-align: center;
+  color: #0be0cb;
+}
+
+.chat-container {
+  width: 100%;
+  min-width: 320px;
+  margin: 30px auto;
+}
+
+.sign-up {
+  width: 90%;
+  max-width: 350px;
+  padding: 25px;
+  margin: 0 auto;
+}
+
+.username-error {
+  display: block;
+  width: 200px;
+  margin: 0 auto 15px;
+  padding: 10px 0;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  background-color: #fc8383;
+}
+
+.input-username {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #0be0cb;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #878787;
+}
+
+.input-username:focus {
+  outline: none;
+}
+
+.input-username::placeholder {
+  color: #0be0cb;
+}
+
+.sign-up-btn {
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin: 15px auto 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0be0cb;
+}
+
+.username-title {
+  width: 90%;
+  min-width: 300px;
+  margin: 30px auto 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: left;
+  color: #878787;
+}
+
+.chat-output {
+  width: 90%;
+  min-width: 300px;
+  height: 500px;
+  margin: 15px auto 0;
+  padding: 10px;
+  border: 2px solid #0be0cb;
+  border-radius: 4px;
+}
+
+.chat-input {
+  width: 90%;
+  min-width: 300px;
+  height: max-content;
+  min-height: 40px;
+  margin: 10px auto 0;
+  border: 2px solid #0be0cb;
+  border-radius: 4px;
+  display: flex;
+}
+
+.chat-input-message {
+  display: block;
+  width: 70%;
+  height: max-content;
+  min-height: inherit;
+  border: none;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  color: #878787;
+}
+
+.chat-input-message:focus {
+  outline: none;
+}
+
+.send-message-btn {
+  display: inline-block;
+  width: 30%;
+  height: auto;
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background-color: #0be0cb;
+}
