@@ -13,8 +13,10 @@ socketIOConnection.on("connection", (socket) => {
   console.log("new connection ", socket.id);
 
   socket.on("chat:message", (data) => {
-    console.log("Data: ", data);
-    socketIOConnection.sockets.emit("chat:message", data);
+    //console.log("Data: ", data);
+    //socket.emit("chat:message", data);
+    //Con broadcast, el evento se enviará a todos menos al emisor
+    socket.broadcast.emit("chat:message", data);
   });
 
   socket.on("chat:typing", (data) => {

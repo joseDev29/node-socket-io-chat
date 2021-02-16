@@ -9,7 +9,13 @@
 .chat-container {
   width: 100%;
   min-width: 320px;
+  max-width: 600px;
   margin: 30px auto;
+}
+
+.sign-up-alerts {
+  width: 100%;
+  height: auto;
 }
 
 .sign-up {
@@ -80,9 +86,9 @@
 .chat-output {
   width: 90%;
   min-width: 300px;
-  height: 500px;
+  height: 400px;
   margin: 15px auto 0;
-  padding: 10px;
+  padding: 3px;
   border: 2px solid #0be0cb;
   border-radius: 4px;
 }
@@ -93,8 +99,6 @@
   height: max-content;
   min-height: 40px;
   margin: 10px auto 0;
-  border: 2px solid #0be0cb;
-  border-radius: 4px;
   display: flex;
 }
 
@@ -103,7 +107,8 @@
   width: 70%;
   height: max-content;
   min-height: inherit;
-  border: none;
+  border: 2px solid #0be0cb;
+  border-radius: 4px 0 0 4px;
   padding: 0 10px;
   font-size: 1.4rem;
   color: #878787;
@@ -121,9 +126,60 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  border-radius: 0 4px 4px 0;
   font-size: 1.6rem;
   font-weight: 500;
   color: #fff;
   text-decoration: none;
   background-color: #0be0cb;
+}
+
+.chat-messages-container {
+  width: 100%;
+  display: grid;
+  max-height: 93%;
+  grid-template-columns: 100%;
+  row-gap: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.chat-messages-container::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.chat-messages-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.chat-message {
+  display: inline-block;
+  width: max-content;
+  max-width: 260px;
+  padding: 10px;
+  margin-left: 3px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  word-break: break-word;
+  background-color: #ebebeb;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc;
+}
+
+.my-message {
+  justify-self: end;
+  margin-right: 3px;
+  background-color: #a0e8e1;
+}
+
+.typing-action {
+  display: inline-block;
+  height: max-content;
+  padding: 5px 3px;
+  font-size: 1.4rem;
+  color: #636363;
 }
