@@ -53,7 +53,7 @@ function activeChatFunctions() {
     chatOutputMessages.insertAdjacentHTML(
       "beforeend",
       `
-      <p class="chat-message"> 
+      <p class="notranslate chat-message"> 
         <strong>${data.username}:</strong> ${data.message}
       </p>
     `
@@ -82,7 +82,7 @@ function sendMessage(message) {
   chatOutputMessages.insertAdjacentHTML(
     "beforeend",
     `
-      <p class="chat-message my-message"> 
+      <p class="notranslate chat-message my-message"> 
         <strong>${message.username}:</strong> ${message.message}
       </p>
   `

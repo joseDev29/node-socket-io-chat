@@ -143,6 +143,8 @@
   row-gap: 5px;
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc;
 }
 
 .chat-messages-container::-webkit-scrollbar {
@@ -166,8 +168,6 @@
   font-size: 1.4rem;
   word-break: break-word;
   background-color: #ebebeb;
-  scrollbar-width: thin;
-  scrollbar-color: #ccc;
 }
 
 .my-message {
